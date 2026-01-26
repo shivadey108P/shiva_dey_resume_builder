@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiva Dey – Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --navy: #1f2735;
+      --teal: #00a3ad;
+      --muted-teal: #0f8f97;
+      --text: #111827;
+      --subtext: #4b5563;
+      --pill: #e8edf2;
+      --border: #d5d9e1;
+      --bg: #f3f4f6;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: 'Poppins', Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 24px auto;
+      background: var(--card);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* Header */
+    .topbar {
+      background: var(--navy);
+      color: #fff;
+      padding: 24px 28px;
+      display: grid;
+      grid-template-columns: 1.6fr auto 1.1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .headline h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .headline h2 {
+      margin: 0 0 14px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--teal);
+    }
+
+    .headline p {
+      margin: 0;
+      font-size: 14px;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-row:hover {
+      color: #ffffff;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+      font-size: 15px;
+    }
+
+    .profile-pic {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--teal);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+      justify-self: center;
+    }
+
+    /* Layout */
+    .content {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 18px;
+      padding: 20px 24px 28px;
+    }
+
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--navy);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+    }
+
+    /* Experience */
+    .role {
+      margin-bottom: 12px;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .role-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .role-company {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--subtext);
+    }
+
+    .role-meta {
+      font-size: 12px;
+      color: var(--subtext);
+      font-weight: 500;
+    }
+
+    .bullets {
+      padding-left: 18px;
+      margin: 6px 0 0;
+      color: var(--text);
+    }
+
+    .bullets li {
+      margin-bottom: 6px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* Pills */
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 6px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pill {
+      background: var(--pill);
+      color: var(--navy);
+      padding: 8px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid #dfe4ec;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+      text-transform: none;
+    }
+
+    /* Lists */
+    .simple-list {
+      padding-left: 16px;
+      margin: 6px 0;
+      color: var(--text);
+    }
+
+    .simple-list li {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .tech-item h4 {
+      margin: 0 0 4px;
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .tech-item p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--subtext);
+      font-weight: 600;
+    }
+
+    .badge {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 4px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      border: 1px solid #fcd34d;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 13px;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .project-desc {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .topbar {
+        grid-template-columns: 1fr;
+        justify-items: start;
+      }
+
+      .headline {
+        order: 1;
+      }
+
+      .profile-pic {
+        order: 2;
+        justify-self: start;
+        margin: 10px 0;
+      }
+
+      .contact {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="headline">
+        <h1>Shiva Narayan Dey</h1>
+        <h2>Full-Stack Engineer | Python, SQL | AWS Cloud & GenAI | React</h2>
+        <p>
+          Full-stack engineer with 5+ years of experience building and supporting cloud-native applications using Python,
+          SQL, and AWS. Backend-focused with hands-on experience in FastAPI, Flask, PySpark, and data-intensive systems,
+          complemented by React-based frontend development. Experienced in scalable API design, legacy system
+          modernization, and operating production systems with strong ownership, including GenAI solutions using RAG and
+          agent-driven automation.
+        </p>
+      </div>
+      <img class="profile-pic" src="images/my_pic.jpeg" alt="Profile Photo" />
+      <div class="contact">
+        <div class="contact-info">
+          <a class="contact-row" href="mailto:DEY.SN@OUTLOOK.COM">
+            <span class="icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+            <span>DEY.SN@OUTLOOK.COM</span>
+          </a>
+          <a class="contact-row" href="tel:+918555914966">
+            <span class="icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+            <span>+918555914966</span>
+          </a>
+          <a class="contact-row" href="https://maps.google.com/?q=Hyderabad%2C%20India" target="_blank" rel="noopener noreferrer">
+            <span class="icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+            <span>Hyderabad, India</span>
+          </a>
+          <a class="contact-row" href="https://www.linkedin.com/in/shiva-d-13495821a/" target="_blank" rel="noopener noreferrer">
+            <span class="icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
+            <span>linkedin.com/in/shiva-d-13495821a/</span>
+          </a>
+          <a class="contact-row" href="https://github.com/shivadey108P" target="_blank" rel="noopener noreferrer">
+            <span class="icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
+            <span>github.com/shivadey108P</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <main>
+        <section class="section-card">
+          <h3 class="section-title">Work Experience</h3>
+
+          <div class="role">
+            <div class="role-header">
+              <div>
+                <div class="role-title">TECHNICAL LEAD – DATA / PLATFORM ENGINEERING</div>
+                <div class="role-company">EY GDS (Client: The Vanguard Group)</div>
+              </div>
+              <div class="role-meta">07/2025 - Present | Hyderabad, India</div>
+            </div>
+            <div class="role-meta">Achievements/Tasks</div>
+            <ul class="bullets">
+              <li>Working as a Data / Platform Engineer on modernising legacy DB2 + Control-M–based data workflows into a cloud-native AWS architecture.</li>
+              <li>Designed and implemented high-volume data ingestion pipelines processing large text-based datasets from multiple upstream systems.</li>
+              <li>Built and maintained AWS Glue ETL pipelines using PySpark and Python for data cleansing, transformation, and integration.</li>
+              <li>Integrated Amazon Redshift as part of a database modernisation initiative, replacing legacy DB2 workloads.</li>
+              <li>Implemented DynamoDB-based data distribution to enable low-latency access for downstream APIs and services.</li>
+              <li>Enabled event-driven notifications via Amazon SNS to communicate pipeline completion and job status.</li>
+              <li>Designed multi-region deployment and failover strategies to support disaster recovery and business continuity.</li>
+              <li>Integrated CloudWatch monitoring and PagerDuty alerts, actively participating in on-call rotations and incident resolution.</li>
+              <li>Improved overall system availability to ~96.9% and reduced MTTR by strengthening monitoring, alerting, and recovery workflows across a hybrid legacy + cloud environment with ongoing Control-M dependencies.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-header">
+              <div>
+                <div class="role-title">SOFTWARE ENGINEER / PROGRAMMER ANALYST</div>
+                <div class="role-company">Cognizant</div>
+              </div>
+              <div class="role-meta">11/2020 - 07/2025 | Hyderabad, India</div>
+            </div>
+            <div class="role-meta">Achievements/Tasks</div>
+            <ul class="bullets">
+              <li>Worked on enterprise applications with a focus on backend validation, automation, and end-to-end system workflows.</li>
+              <li>Built Python-based automation utilities and SQL validation frameworks, improving regression reliability and reducing manual validation effort.</li>
+              <li>Collaborated closely with backend developers to identify and debug API, data, and integration issues, accelerating defect resolution cycles.</li>
+              <li>Gained hands-on experience with REST APIs, relational databases, Linux environments, and cloud fundamentals, strengthening core backend engineering skills.</li>
+              <li>Supported production releases and incident triage, contributing to faster issue isolation and improved operational stability.</li>
+              <li>Contributed to process improvements, documentation, and knowledge sharing, supporting smoother onboarding and team efficiency.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Certificates</h3>
+          <div class="role-header">
+            <div class="role-title">AWS Certified Cloud Practitioner</div>
+            <div class="role-meta">11/2024 - 11/2027</div>
+          </div>
+          <div class="role-meta">https://cp.certmetrics.com/amazon/en/public/verify/credential/9ddc675bcebd470fb458b0207b112c75</div>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Education</h3>
+
+          <div class="role">
+            <div class="role-header">
+              <div>
+                <div class="role-title">MASTER’S DEGREE</div>
+                <div class="role-company">SRM UNIVERSITY</div>
+              </div>
+              <div class="role-meta">03/2023 - 03/2025 | Online / Distance Mode</div>
+            </div>
+            <div class="role-meta">Courses</div>
+            <ul class="bullets">
+              <li>Computer Applications</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-header">
+              <div>
+                <div class="role-title">BACHELOR’S DEGREE</div>
+                <div class="role-company">BHAVAN’S VIVEKANANDA COLLEGE</div>
+              </div>
+              <div class="role-meta">06/2017 - 11/2020 | Hyderabad, India</div>
+            </div>
+            <div class="role-meta">Courses</div>
+            <ul class="bullets">
+              <li>Mathematics, Physics and Computer Science</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <section class="section-card">
+          <h3 class="section-title">Skills</h3>
+          <ul class="pill-list">
+            <li class="pill">REST API Design</li>
+            <li class="pill">Data Pipelines & Integration</li>
+            <li class="pill">Batch & Event-Driven Systems</li>
+            <li class="pill">Cloud-Native Architecture (AWS)</li>
+            <li class="pill">Generative AI (RAG)</li>
+          </ul>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Organizations</h3>
+          <ul class="simple-list">
+            <li>EY GDS India LLP (07/2025 - Present)</li>
+            <li>Cognizant (11/2020 - 07/2025)</li>
+          </ul>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Technical Skills</h3>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h4>Languages & Frameworks</h4>
+              <p>Python (FastAPI, Flask), PySpark, SQL</p>
+            </div>
+            <div class="tech-item">
+              <h4>Frontend</h4>
+              <p>React, JavaScript (ES6+), HTML, CSS</p>
+            </div>
+            <div class="tech-item">
+              <h4>Cloud & DevOps</h4>
+              <p>AWS (S3, Glue, Redshift, DynamoDB, SNS, IAM, CloudWatch), Docker, GitHub Actions, Linux</p>
+            </div>
+            <div class="tech-item">
+              <h4>Backend & Data Engineering</h4>
+              <p>REST API Design, ETL / Data Pipelines, Data Integration, Batch & Event-Driven Processing</p>
+            </div>
+            <div class="tech-item">
+              <h4>Generative AI</h4>
+              <p>Retrieval-Augmented Generation (RAG), Prompt Engineering, AI Agents (working knowledge), AWS Bedrock</p>
+            </div>
+            <div class="tech-item">
+              <h4>System Design & Reliability</h4>
+              <p>Scalable Systems, Monitoring & Alerting, Incident Management, High Availability & Disaster Recovery</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Personal Projects</h3>
+          <div class="label-row">
+            <div class="project-title">Generative AI-powered DevOps Assistant</div>
+            <div class="role-meta">07/2025 - 07/2025</div>
+          </div>
+          <p class="project-desc">Developed using FastAPI, React, and RAG-based knowledge retrieval to assist engineers during production incidents and operational troubleshooting.</p>
+          <p class="project-desc"><b>GitHub repo: </b> <a href="https://github.com/shivadey108P/devops-ai-assistant">https://github.com/shivadey108P/devops-ai-assistant</a></p>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Honor Awards</h3>
+          <div class="role">
+            <div class="label-row">
+              <div class="role-title">Academic Excellence Award | SRM University</div>
+              <div class="role-meta">03/2023 - 03/2025</div>
+            </div>
+            <div class="role-meta">Name of the institution that issued/awarded it</div>
+          </div>
+          <div class="role">
+            <div class="label-row">
+              <div class="role-title">1st Prize | Bhavan’s Vivekananda College</div>
+              <div class="role-meta">06/2019 - 12/2019</div>
+            </div>
+            <div class="role-meta">Name of the institution that issued/awarded it</div>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Languages</h3>
+          <ul class="simple-list">
+            <li>English (Native or Bilingual Proficiency)</li>
+            <li>Hindi (Native or Bilingual Proficiency)</li>
+            <li>Telugu (Professional Working Proficiency)</li>
+          </ul>
+        </section>
+
+        <section class="section-card">
+          <h3 class="section-title">Interests</h3>
+          <div class="pill" style="display: inline-block;">Fitness & strength training, boxing, badminton, chess, piano</div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
