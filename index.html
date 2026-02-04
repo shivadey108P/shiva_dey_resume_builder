@@ -279,6 +279,17 @@
     }
 
     @media (max-width: 900px) {
+      .headline h1 {
+        font-size: 22px;
+      }
+    
+      .headline h2 {
+        font-size: 14px;
+      }
+    
+      .headline p {
+        font-size: 13px;
+      }
       .topbar {
         grid-template-columns: 1fr;
         justify-items: start;
@@ -292,6 +303,8 @@
         order: 2;
         justify-self: start;
         margin: 10px 0;
+        width: 90px;
+        height: 90px;
       }
 
       .contact {
@@ -303,6 +316,17 @@
       .content {
         grid-template-columns: 1fr;
       }
+      .contact-info {
+        gap: 10px;
+        font-size: 12px;
+      }
+      .bullets li {
+        font-size: 12.5px;
+      }
+      .pill {
+        padding: 6px 10px;
+        font-size: 11.5px;
+      }
     }
   </style>
 </head>
@@ -311,15 +335,15 @@
     <header class="topbar">
       <div class="headline">
         <h1>Shiva Narayan Dey</h1>
-        <h2>Full-Stack Engineer | Python, SQL | AWS Cloud & GenAI | React</h2>
+        <h2>Full-Stack Engineer | Python, React | AWS Cloud</h2>
         <p>
-          Full-stack engineer with 5+ years of experience building and supporting cloud-native applications using Python,
-          SQL, and AWS. Backend-focused with hands-on experience in FastAPI, Flask, PySpark, and data-intensive systems,
-          complemented by React-based frontend development. Experienced in scalable API design, legacy system
-          modernization, and operating production systems with strong ownership, including GenAI solutions using RAG and
-          agent-driven automation.
+          Full-stack engineer with 5+ years of experience building cloud-native web applications using Python, React, SQL, and AWS.
+          Strong focus on backend services, scalable REST APIs, and application modernization, with hands-on ownership of
+          production systems. Experienced in designing reliable, high-availability applications and building user-facing
+          features that improve operational efficiency. Experience building GenAI-enabled application features and data-integrated systems.
         </p>
       </div>
+      
       <img class="profile-pic" src="images/my_pic.jpeg" alt="Profile Photo" />
       <div class="contact">
         <div class="contact-info">
@@ -355,24 +379,25 @@
           <div class="role">
             <div class="role-header">
               <div>
-                <div class="role-title">TECHNICAL LEAD – DATA / PLATFORM ENGINEERING</div>
+                <div class="role-title">TECHNICAL LEAD – Application Engineer</div>
                 <div class="role-company">EY GDS (Client: The Vanguard Group)</div>
               </div>
               <div class="role-meta">07/2025 - Present | Hyderabad, India</div>
             </div>
-            <div class="role-meta">Achievements/Tasks</div>
+          
+            <div class="role-meta">Achievements / Responsibilities</div>
             <ul class="bullets">
-              <li>Working as a Data / Platform Engineer on modernising legacy DB2 + Control-M–based data workflows into a cloud-native AWS architecture.</li>
-              <li>Designed and implemented high-volume data ingestion pipelines processing large text-based datasets from multiple upstream systems.</li>
-              <li>Built and maintained AWS Glue ETL pipelines using PySpark and Python for data cleansing, transformation, and integration.</li>
-              <li>Integrated Amazon Redshift as part of a database modernisation initiative, replacing legacy DB2 workloads.</li>
-              <li>Implemented DynamoDB-based data distribution to enable low-latency access for downstream APIs and services.</li>
-              <li>Enabled event-driven notifications via Amazon SNS to communicate pipeline completion and job status.</li>
-              <li>Designed multi-region deployment and failover strategies to support disaster recovery and business continuity.</li>
-              <li>Integrated CloudWatch monitoring and PagerDuty alerts, actively participating in on-call rotations and incident resolution.</li>
-              <li>Improved overall system availability to ~96.9% and reduced MTTR by strengthening monitoring, alerting, and recovery workflows across a hybrid legacy + cloud environment with ongoing Control-M dependencies.</li>
+              <li>Leading development of internal full-stack applications to improve system availability, observability, and incident resolution workflows.</li>
+              <li>Designing and building user-facing web interfaces and backend services using modern application architecture principles.</li>
+              <li>Developing backend APIs and application logic in Python that abstract data pipelines and integrate cloud services and operational tooling.</li>
+              <li>Working closely with data engineering workflows (AWS Glue, PySpark) as backend integrations rather than core responsibilities.</li>
+              <li>Designing and implementing cloud-native application components on AWS, including scalable storage, messaging, and service orchestration.</li>
+              <li>Implementing event-driven application workflows using AWS services to automate system notifications and recovery actions.</li>
+              <li>Driving application reliability improvements by enhancing monitoring dashboards, alerting mechanisms, and recovery automation.</li>
+              <li>Contributing to an MTTR reduction initiative by building application features that streamline diagnostics, triage, and resolution.</li>
+              <li>Supporting high availability (~96.9%) through resilient application design across hybrid legacy and cloud environments.</li>
             </ul>
-          </div>
+          </div>          
 
           <div class="role">
             <div class="role-header">
@@ -382,16 +407,19 @@
               </div>
               <div class="role-meta">11/2020 - 07/2025 | Hyderabad, India</div>
             </div>
-            <div class="role-meta">Achievements/Tasks</div>
+          
+            <div class="role-meta">Achievements / Responsibilities</div>
             <ul class="bullets">
-              <li>Worked on enterprise applications with a focus on backend validation, automation, and end-to-end system workflows.</li>
-              <li>Built Python-based automation utilities and SQL validation frameworks, improving regression reliability and reducing manual validation effort.</li>
-              <li>Collaborated closely with backend developers to identify and debug API, data, and integration issues, accelerating defect resolution cycles.</li>
-              <li>Gained hands-on experience with REST APIs, relational databases, Linux environments, and cloud fundamentals, strengthening core backend engineering skills.</li>
-              <li>Supported production releases and incident triage, contributing to faster issue isolation and improved operational stability.</li>
-              <li>Contributed to process improvements, documentation, and knowledge sharing, supporting smoother onboarding and team efficiency.</li>
+              <li>Worked on enterprise-scale applications with a strong focus on backend systems, APIs, and end-to-end application workflows.</li>
+              <li>Developed Python-based utilities and automation frameworks to validate business logic, data consistency, and API behavior.</li>
+              <li>Designed and executed SQL-based validations across multiple data stores to ensure correctness of application flows.</li>
+              <li>Collaborated closely with backend and integration teams to debug REST API issues, data mismatches, and service failures.</li>
+              <li>Gained hands-on experience working with RESTful services, relational databases, Linux-based environments, and cloud-hosted applications.</li>
+              <li>Actively participated in release cycles and production support activities, improving issue diagnosis and resolution efficiency.</li>
+              <li>Contributed to process improvements, internal tooling, and technical documentation to enhance overall team productivity.</li>
             </ul>
           </div>
+          
         </section>
 
         <section class="section-card">
@@ -440,13 +468,13 @@
         <section class="section-card">
           <h3 class="section-title">Skills</h3>
           <ul class="pill-list">
-            <li class="pill">REST API Design</li>
-            <li class="pill">Data Pipelines & Integration</li>
-            <li class="pill">Batch & Event-Driven Systems</li>
+            <li class="pill">Full-Stack Application Development</li>
+            <li class="pill">REST API Design & Integration</li>
             <li class="pill">Cloud-Native Architecture (AWS)</li>
-            <li class="pill">Generative AI (RAG)</li>
+            <li class="pill">Event-Driven Application Design</li>
+            <li class="pill">GenAI-Enabled Features (RAG)</li>
           </ul>
-        </section>
+        </section>        
 
         <section class="section-card">
           <h3 class="section-title">Organizations</h3>
@@ -459,30 +487,42 @@
         <section class="section-card">
           <h3 class="section-title">Technical Skills</h3>
           <div class="tech-grid">
+        
             <div class="tech-item">
-              <h4>Languages & Frameworks</h4>
-              <p>Python (FastAPI, Flask), PySpark, SQL</p>
+              <h4>Backend Development</h4>
+              <p>Python (FastAPI, Flask), REST API Design, SQL</p>
             </div>
+        
             <div class="tech-item">
-              <h4>Frontend</h4>
+              <h4>Frontend Development</h4>
               <p>React, JavaScript (ES6+), HTML, CSS</p>
             </div>
+        
             <div class="tech-item">
               <h4>Cloud & DevOps</h4>
-              <p>AWS (S3, Glue, Redshift, DynamoDB, SNS, IAM, CloudWatch), Docker, GitHub Actions, Linux</p>
+              <p>AWS (S3, DynamoDB, SNS, IAM, CloudWatch, Redshift, Glue), Docker, GitHub Actions, Linux</p>
             </div>
+        
             <div class="tech-item">
-              <h4>Backend & Data Engineering</h4>
-              <p>REST API Design, ETL / Data Pipelines, Data Integration, Batch & Event-Driven Processing</p>
+              <h4>Application Architecture</h4>
+              <p>Service-Oriented Architecture, Event-Driven Systems, Data Integration</p>
             </div>
+        
+            <div class="tech-item">
+              <h4>Data & Processing</h4>
+              <p>ETL Pipelines, PySpark, Batch Processing</p>
+            </div>
+        
             <div class="tech-item">
               <h4>Generative AI</h4>
-              <p>Retrieval-Augmented Generation (RAG), Prompt Engineering, AI Agents (working knowledge), AWS Bedrock</p>
+              <p>RAG-based Applications, Prompt Engineering, AI Agents (working knowledge), AWS Bedrock</p>
             </div>
+        
             <div class="tech-item">
               <h4>System Design & Reliability</h4>
-              <p>Scalable Systems, Monitoring & Alerting, Incident Management, High Availability & Disaster Recovery</p>
+              <p>Scalable Systems, Monitoring & Alerting, Incident Reduction, High Availability</p>
             </div>
+        
           </div>
         </section>
 
