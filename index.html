@@ -23,7 +23,44 @@
 
     * {
       box-sizing: border-box;
+      max-width: 100%;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
+
+    body {
+      overflow-x: hidden;
+    }
+    
+    .role-header > div,
+    .contact,
+    .contact-info,
+    .contact-row,
+    .headline,
+    .tech-item,
+    .project-desc,
+    .project-title {
+      min-width: 0;
+    }
+
+    .contact-row {
+      flex-wrap: wrap;
+      word-break: break-word;
+    }
+    
+    .contact-row a,
+    .contact-row span {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    
+    .bullets li,
+    .simple-list li {
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
+  }
+
 
     body {
       margin: 0;
@@ -127,6 +164,11 @@
       gap: 18px;
       padding: 20px 24px 28px;
     }
+
+    .content {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    
 
     .section-card {
       background: var(--card);
@@ -279,6 +321,11 @@
     }
 
     @media (max-width: 900px) {
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
       .headline h1 {
         font-size: 22px;
       }
