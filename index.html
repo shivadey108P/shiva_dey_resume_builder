@@ -4,684 +4,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shiva Dey – Resume</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Shiva Narayan Dey - Resume</title>
   <style>
-    :root {
-      --navy: #1f2735;
-      --teal: #00a3ad;
-      --text: #111827;
-      --subtext: #4b5563;
-      --pill: #e8edf2;
-      --border: #d5d9e1;
-      --bg: #f3f4f6;
-      --card: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-      max-width: 100%;
-      overflow-wrap: break-word;
-    }
-
     body {
       margin: 0;
-      background: var(--bg);
-      font-family: 'Poppins', Arial, sans-serif;
-      color: var(--text);
-      overflow-x: hidden;
+      padding: 0;
+      background: #ffffff;
+      color: #111827;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
     }
 
-    .role {
-      margin-bottom: 18px;
+    .resume {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
     }
 
-    .section-title {
-      margin-top: 6px;
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.2;
     }
 
-    a {
-      word-break: break-word;
-    }
-
-    /* Page Container */
-    .page {
-      max-width: 1100px;
-      margin: 24px auto;
-      background: var(--card);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    /* Header */
-    .topbar {
-      background: var(--navy);
-      color: #fff;
-      padding: 24px 28px;
-      display: grid;
-      grid-template-columns: 2fr 1.2fr;
-      gap: 20px;
-      align-items: center;
-    }
-
-    /* Ensure header columns can shrink for wrapping */
-    .headline,
-    .contact {
-      min-width: 0;
-    }
-
-    .headline h1 {
-      margin: 0 0 6px;
-      font-size: 28px;
+    .headline {
+      margin: 6px 0 8px;
+      font-size: 18px;
       font-weight: 700;
     }
 
-    .headline h2 {
-      margin: 0 0 14px;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--teal);
-    }
-
-    .headline p {
+    .contact {
       margin: 0;
       font-size: 14px;
-      color: #e5e7eb;
-      line-height: 1.6;
     }
 
-    .contact {
-      display: flex;
-      justify-content: flex-end;
+    h2 {
+      margin: 18px 0 8px;
+      font-size: 18px;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 4px;
     }
 
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 13px;
+    h3 {
+      margin: 14px 0 2px;
+      font-size: 16px;
     }
 
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    /* Layout */
-    .content {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 18px;
-      padding: 20px 24px 28px;
-    }
-
-    /* Allow grid children to shrink and wrap on small screens */
-    .content>* {
-      min-width: 0;
-    }
-
-    /* Cards */
-    .section-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px 18px;
-      margin-bottom: 14px;
-    }
-
-    .section-title {
-      font-size: 15px;
+    .meta {
+      margin: 0 0 6px;
+      color: #374151;
+      font-size: 14px;
       font-weight: 700;
-      color: var(--navy);
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 8px;
-      margin: 0 0 12px;
-      text-transform: uppercase;
     }
 
-    /* Roles */
-    .role-header {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
+    p {
+      margin: 0 0 8px;
+      font-size: 14px;
     }
 
-    /* Permit flex children to shrink so long text wraps instead of overflowing */
-    .role-header>div {
-      min-width: 0;
-    }
-
-    .role-title {
-      font-weight: 700;
-      font-size: 13.5px;
-    }
-
-    .role-company {
-      font-weight: 600;
-      font-size: 13px;
-      color: var(--subtext);
-    }
-
-    .role-meta {
-      font-size: 12px;
-      color: var(--subtext);
-    }
-
-    .bullets {
-      padding-left: 16px;
-      margin-top: 8px;
-    }
-
-    .bullets li {
-      margin-bottom: 8px;
-      font-size: 13px;
-      line-height: 1.5;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-      word-wrap: break-word;
-    }
-
-    /* Skills Pills */
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      list-style: none;
+    ul {
+      margin: 0 0 10px 18px;
       padding: 0;
     }
 
-    .pill {
-      background: var(--pill);
-      padding: 8px 12px;
-      border-radius: 16px;
-      font-size: 12px;
-      font-weight: 600;
+    li {
+      margin: 0 0 6px;
+      font-size: 14px;
     }
 
-    /* Tech Grid */
-    .tech-grid {
-      display: grid;
-      gap: 10px;
+    a {
+      color: #111827;
+      text-decoration: none;
     }
 
-    .tech-item h4 {
-      margin: 0 0 4px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .tech-item p {
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    /* Project */
-    .project-desc {
-      margin: 4px 0 0;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    /* ============================= */
-    /* 📱 MOBILE VIEW */
-    /* ============================= */
-
-    @media (max-width: 900px) {
-
-      .page {
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none;
+    @media print {
+      .resume {
+        max-width: none;
+        padding: 0;
       }
 
-      .topbar {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 20px 18px;
-        text-align: left;
-      }
-
-      .headline h1 {
-        font-size: 22px;
-      }
-
-      .headline h2 {
-        font-size: 14px;
-      }
-
-      .headline p {
-        font-size: 13px;
-        line-height: 1.7;
-      }
-
-      .contact {
-        justify-content: flex-start;
-      }
-
-      .content {
-        grid-template-columns: 1fr;
-        padding: 16px;
-        gap: 14px;
-      }
-
-      .section-card {
-        border: none;
-        border-bottom: 1px solid #e5e7eb;
-        border-radius: 0;
-        padding: 16px 0;
-      }
-
-      .section-title {
-        font-size: 14px;
-      }
-
-      .bullets li,
-      .tech-item p,
-      .project-desc {
-        font-size: 12.8px;
-        line-height: 1.6;
-      }
-
-      .pill {
-        font-size: 11.5px;
-        padding: 6px 10px;
-      }
-
-      .role-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-    }
-
-    @media (max-width: 700px) {
-
-      .topbar {
-        padding: 16px 14px;
-        gap: 12px;
-      }
-
-      .headline h1 {
-        font-size: 20px;
-      }
-
-      .headline h2 {
-        font-size: 13px;
-      }
-
-      .headline p {
-        font-size: 12.5px;
-        line-height: 1.6;
-      }
-
-      .contact-info {
-        font-size: 12px;
-      }
-
-      .content {
-        padding: 12px;
-        gap: 12px;
-      }
-
-      .section-card {
-        padding: 14px 0;
-      }
-
-      .section-title {
-        font-size: 13.5px;
-      }
-
-      .bullets li,
-      .tech-item p,
-      .project-desc {
-        font-size: 12.4px;
-        line-height: 1.55;
-      }
-
-      .pill {
-        font-size: 11px;
-        padding: 6px 9px;
-      }
-
-      .role-title {
-        font-size: 12.8px;
-      }
-
-      .role-meta,
-      .role-company {
-        font-size: 11.8px;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .topbar {
-        padding: 14px 12px;
-        gap: 10px;
-      }
-
-      .headline h1 {
-        font-size: 19px;
-      }
-
-      .headline h2 {
-        font-size: 12.5px;
-      }
-
-      .headline p {
-        font-size: 12px;
-        line-height: 1.55;
-      }
-
-      .contact-info {
-        font-size: 11.5px;
-      }
-
-      .content {
-        padding: 10px;
-        gap: 10px;
-      }
-
-      .section-card {
-        padding: 12px 0;
-      }
-
-      .section-title {
-        font-size: 13px;
-      }
-
-      .bullets li,
-      .tech-item p,
-      .project-desc {
-        font-size: 12.1px;
-        line-height: 1.5;
-      }
-
-      .pill {
-        font-size: 10.8px;
-        padding: 6px 8px;
+      a {
+        text-decoration: none;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <header class="topbar">
-      <div class="headline">
-        <h1>Shiva Narayan Dey</h1>
-        <h2>Senior Full-Stack Engineer | Python, React, Node.js | AWS, Microservices, GenAI</h2>
-        <p>Software Engineer with 5+ years of experience designing and delivering scalable full-stack applications and
-          backend systems using Python, React, Node.js, and AWS. Strong expertise in microservices architecture, loosely
-          coupled system design, RESTful APIs, and distributed data processing (PySpark). Experienced in building
-          responsive React frontends integrated with containerized backend services, deployed via CI/CD pipelines in
-          cloud-native environments. Led development of production-grade applications with high availability and
-          observability requirements. Recently focused on integrating LLM-powered features and RAG workflows into
-          enterprise systems.</p>
-      </div>
-      <div class="contact">
-        <div class="contact-info">
-          <a class="contact-row" href="mailto:DEY.SN@OUTLOOK.COM">
-            <span class="icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
-            <span>DEY.SN@OUTLOOK.COM</span>
-          </a>
-          <a class="contact-row" href="tel:+918555914966">
-            <span class="icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
-            <span>+918555914966</span>
-          </a>
-          <a class="contact-row" href="https://maps.google.com/?q=Hyderabad%2C%20India" target="_blank"
-            rel="noopener noreferrer">
-            <span class="icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
-            <span>Hyderabad, India</span>
-          </a>
-          <a class="contact-row" href="https://www.linkedin.com/in/shiva-d-13495821a/" target="_blank"
-            rel="noopener noreferrer">
-            <span class="icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
-            <span>linkedin.com/in/shiva-d-13495821a/</span>
-          </a>
-          <a class="contact-row" href="https://github.com/shivadey108P" target="_blank" rel="noopener noreferrer">
-            <span class="icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
-            <span>github.com/shivadey108P</span>
-          </a>
-        </div>
-      </div>
+  <main class="resume">
+    <header>
+      <h1>Shiva Narayan Dey</h1>
+      <p class="headline">Data &amp; Backend Engineer | PySpark, AWS | AI &amp; LLM Systems
+      </p>
+      <p class="contact">Hyderabad, India | <a href="mailto:DEY.SN@OUTLOOK.COM">DEY.SN@OUTLOOK.COM</a> | <a
+          href="tel:+918555914966">+91-8555914966</a> | <a href="https://github.com/shivadey108P" target="_blank"
+          rel="noopener noreferrer">github.com/shivadey108P</a> | <a
+          href="https://www.linkedin.com/in/shiva-d-13495821a/" target="_blank"
+          rel="noopener noreferrer">linkedin.com/in/shiva-d-13495821a</a></p>
     </header>
 
-    <div class="content">
-      <main>
-        <section class="section-card">
-          <h3 class="section-title">Work Experience</h3>
+    <section>
+      <h2>Summary</h2>
+      <p>Software Engineer with 5+ years of experience in backend development, cloud-native systems, and distributed
+        data processing using Python and AWS. Experienced in building scalable microservices, REST APIs, and
+        event-driven architectures using FastAPI and modern cloud services. Strong background in designing ETL
+        pipelines using PySpark, AWS Glue, and Databricks for large-scale data processing. Currently focused on
+        AI-powered systems using LLMs, including AWS Bedrock (Claude models), Google AI Studio (Gemini),
+        Hugging Face model ecosystem, RAG-based workflows, and
+        LangGraph-style orchestration patterns. Hands-on experience in prompt engineering, LLM API integration,
+        SFT/RLHF workflow fundamentals, and secure SLM deployment patterns in private cloud environments for sensitive
+        data use cases.</p>
+    </section>
 
-          <div class="role">
-            <div class="role-header">
-              <div>
-                <div class="role-title">TECHNICAL LEAD – Application Engineer</div>
-                <div class="role-company">EY GDS (Client: The Vanguard Group)</div>
-              </div>
-              <div class="role-meta">07/2025 - Present | Hyderabad, India</div>
-            </div>
+    <section>
+      <h2>Work Experience</h2>
 
-            <div class="role-meta">Achievements / Responsibilities</div>
-            <ul class="bullets">
-              <li>Led design and implementation of microservices-based backend services using FastAPI and Node.js,
-                scaling internal applications on AWS.</li>
-              <li>Designed RESTful APIs for structured and event-driven workflows integrated with S3, SNS, DynamoDB, and
-                Glue; supported high-volume internal workflows.</li>
-              <li>Implemented event-driven architecture with SNS/SQS to automate recovery and notification flows,
-                reducing incident triage time by ~20% via improved monitoring dashboards.</li>
-              <li>Owned frontend feature development using React, optimizing component rendering and state management to
-                support data-intensive workflows.</li>
-              <li>Containerized services with Docker and delivered CI/CD pipelines using GitHub Actions for consistent,
-                auditable deployments across hybrid cloud.</li>
-              <li>Applied security-by-design practices (authentication, IAM roles, least privilege) to harden internal
-                services for regulated environments.</li>
-              <li>Supported applications used by cross-functional teams across multiple regions, aligning releases with
-                compliance and change-management requirements.</li>
-              <li>Partnered with cross-functional SRE and compliance teams to improve MTTR and sustain ~96.9% service
-                availability through resilient design and alerting.</li>
-              <li>Collaborated with UI and product teams to ship end-to-end features spanning React frontends and
-                Python/Node.js APIs.</li>
-            </ul>
-          </div>
+      <h3>Technical Lead - Application Engineer | EY GDS (Client: The Vanguard Group)</h3>
+      <p class="meta">Jul 2025 - Present | Hyderabad, India</p>
+      <ul>
+        <li>Designed and developed Python-based backend services using FastAPI and Node.js for scalable microservice
+          architectures on AWS.</li>
+        <li>Built ETL workflows using PySpark and AWS Glue to process high-volume enterprise datasets in distributed
+          environments.</li>
+        <li>Implemented AI-powered automation workflows using AWS Bedrock (Claude models) for operational diagnostics,
+          log
+          analysis, and incident support.</li>
+        <li>Implemented RAG-based knowledge retrieval systems integrating Confluence and KT repositories for automated
+          documentation and system insights.</li>
+        <li>Developed agentic workflows using LangGraph-style orchestration to automate troubleshooting and
+          decision-making processes.</li>
+        <li>Implemented evaluation workflows for LLM responses using feedback loops and quality checks to improve
+          relevance, consistency, and safety of generated outputs.</li>
+        <li>Integrated LLM APIs with backend systems to enable contextual analysis of logs, metrics, and workflow data.
+        </li>
+        <li>Applied prompt engineering techniques to improve accuracy and reliability of AI-driven automation systems.
+        </li>
+        <li>Contributed to secure AI platform patterns, including private-cloud SLM inference design, access controls,
+          and data-handling guardrails for enterprise use cases.</li>
+        <li>Built resilient data workflows with validation, retry/idempotency patterns, and monitoring alerts to improve
+          pipeline reliability in production.</li>
+        <li>Designed loosely coupled event-driven systems with SNS/SQS to automate recovery and alerting workflows,
+          reducing incident triage effort by ~20% and improving MTTR.</li>
+        <li>Containerized services using Docker and deployed through CI/CD pipelines with GitHub Actions for repeatable
+          releases, supporting ~96.9% service availability for internal users.</li>
+      </ul>
 
-          <div class="role">
-            <div class="role-header">
-              <div>
-                <div class="role-title">SOFTWARE ENGINEER / PROGRAMMER ANALYST</div>
-                <div class="role-company">Cognizant</div>
-              </div>
-              <div class="role-meta">11/2020 - 07/2025 | Hyderabad, India</div>
-            </div>
+      <h3>Software Engineer / Programmer Analyst | Cognizant</h3>
+      <p class="meta">Nov 2020 - Jul 2025 | Hyderabad, India</p>
+      <ul>
+        <li>Worked on 9+ enterprise projects across data engineering, backend systems, cloud modernization, and
+          automation initiatives.</li>
+        <li>Built ETL pipelines using AWS Glue, PySpark, SQL, and Databricks for large-scale data ingestion,
+          transformation, and curation.</li>
+        <li>Implemented data quality validations (schema checks, null checks, reconciliation rules) to improve trust in
+          downstream analytics workflows.</li>
+        <li>Developed Python backend utilities and AWS Lambda-based APIs using boto3, pandas, and numpy for workflow
+          automation and validation systems, reducing repetitive manual checks by ~25%.</li>
+        <li>Designed REST APIs with Flask, SQLAlchemy, JWT authentication, and role-based access controls for
+          enterprise services.</li>
+        <li>Integrated early-stage LLM-based automation using OpenAI and Google AI Studio (Gemini) APIs for log
+          analysis, validation
+          workflows, and developer productivity use cases.</li>
+        <li>Applied prompt engineering techniques to generate contextual insights for debugging and operational
+          analysis.</li>
+        <li>Implemented backend scripts leveraging LLM capabilities for log summarization and troubleshooting
+          assistance.</li>
+        <li>Migrated legacy application components to AWS (ECS, Docker, CloudFormation), improving deployment
+          consistency and reliability while reducing release rollback risk.</li>
+        <li>Supported cloud cost and performance optimization initiatives by tuning batch workflows and reducing
+          inefficient compute usage patterns.</li>
+        <li>Maintained CI/CD pipelines with GitHub Actions for automated releases across environments.</li>
+      </ul>
+    </section>
 
-            <div class="role-meta">Achievements / Responsibilities</div>
-            <ul class="bullets">
-              <li>Built backend utilities and service-level validation frameworks in Python to support enterprise
-                application reliability.</li>
-              <li>Designed SQL-based validation pipelines ensuring data integrity across relational data stores for
-                high-volume internal workflows.</li>
-              <li>Debugged REST API integrations and service-to-service communication issues across distributed systems
-                in Linux-based cloud environments.</li>
-              <li>Containerized services with Docker and contributed to CI/CD pipelines (GitHub Actions) for repeatable
-                deployments.</li>
-              <li>Partnered with cross-functional teams during release cycles and production support, strengthening
-                incident response and documentation.</li>
-            </ul>
-          </div>
+    <section>
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Data Engineering:</strong> PySpark, AWS Glue, Databricks, ETL Pipelines, Batch Processing, Data
+          Transformation, SQL</li>
+        <li><strong>Data Platform Reliability:</strong> Data Quality Checks, Schema Validation, Reconciliation,
+          Idempotent Processing, Pipeline Monitoring, Alerting</li>
+        <li><strong>Backend Engineering:</strong> Python, FastAPI, Flask, Node.js, REST APIs, GraphQL, SQLAlchemy, JWT
+        </li>
+        <li><strong>Cloud &amp; Modernization:</strong> AWS (S3, Lambda, DynamoDB, ECS, Glue, SNS/SQS, IAM, CloudWatch,
+          CloudFormation), Docker, Linux</li>
+        <li><strong>Agentic AI &amp; LLM Workflows:</strong> OpenAI, AWS Bedrock, Google AI Studio (Gemini), Hugging
+          Face,
+          RAG, LangChain, LangGraph, Prompt
+          Engineering, Tool Calling</li>
+        <li><strong>Model Adaptation &amp; AI Ops:</strong> Supervised Fine-Tuning (SFT) workflows, RLHF concepts,
+          Hugging Face-based model adaptation workflows,
+          evaluation loops, guardrails, feedback-driven prompt tuning</li>
+        <li><strong>LLM Production Practices:</strong> Prompt Versioning, Response Evaluation, Grounding Strategies,
+          Hallucination Risk Reduction, Human-in-the-loop Review Patterns</li>
+        <li><strong>Private AI Deployment:</strong> SLM/LLM inference in private cloud/VPC environments, IAM-based
+          access control, secure data handling patterns</li>
+        <li><strong>DevOps:</strong> GitHub Actions, CI/CD Pipelines, Monitoring, Alerting, Reliability Engineering</li>
+      </ul>
+    </section>
 
-        </section>
+    <section>
+      <h2>Projects</h2>
+      <h3>AI-Powered DevOps Assistant</h3>
+      <p class="meta">Jul 2025 - Jul 2025</p>
+      <ul>
+        <li>Developed an AI-powered assistant using FastAPI/Node.js backend and React frontend for operational support
+          workflows, improving incident troubleshooting efficiency through AI-assisted diagnostics.</li>
+        <li>Integrated LLM APIs (AWS Bedrock/OpenAI) and implemented RAG pipelines for incident troubleshooting support.
+        </li>
+        <li>Developed backend APIs for AI inference, data retrieval, and task automation; deployed with Docker and
+          CI/CD.</li>
+      </ul>
+      <p>Repository: <a href="https://github.com/shivadey108P/devops-ai-assistant" target="_blank"
+          rel="noopener noreferrer">github.com/shivadey108P/devops-ai-assistant</a></p>
 
-        <section class="section-card">
-          <h3 class="section-title">Certificates</h3>
-          <div class="role-header">
-            <div class="role-title">AWS Certified Cloud Practitioner</div>
-            <div class="role-meta">11/2024 - 11/2027</div>
-          </div>
-          <div class="role-meta">
-            https://cp.certmetrics.com/amazon/en/public/verify/credential/9ddc675bcebd470fb458b0207b112c75</div>
-        </section>
+      <h3>SmartCase - AI Test Case Generator</h3>
+      <ul>
+        <li>Built conversational AI workflows with OpenAI APIs for context-aware test case generation from requirement
+          inputs.</li>
+        <li>Implemented early-stage retrieval patterns for reusable project context and improved response relevance.
+        </li>
+      </ul>
+    </section>
 
-        <section class="section-card">
-          <h3 class="section-title">Education</h3>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Master of Computer Applications (MCA)</strong> - SRM University (2023 - 2025)</li>
+        <li><strong>Bachelor's Degree</strong> - Bhavan's Vivekananda College (2017 - 2020), Mathematics, Physics and
+          Computer Science</li>
+      </ul>
+    </section>
 
-          <div class="role">
-            <div class="role-header">
-              <div>
-                <div class="role-title">MASTER’S DEGREE</div>
-                <div class="role-company">SRM UNIVERSITY</div>
-              </div>
-              <div class="role-meta">03/2023 - 03/2025 | Online / Distance Mode</div>
-            </div>
-            <div class="role-meta">Courses</div>
-            <ul class="bullets">
-              <li>Computer Applications</li>
-            </ul>
-          </div>
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>AWS Certified Cloud Practitioner (Nov 2024 - Nov 2027) | Verification: <a
+            href="https://cp.certmetrics.com/amazon/en/public/verify/credential/9ddc675bcebd470fb458b0207b112c75"
+            target="_blank"
+            rel="noopener noreferrer">https://cp.certmetrics.com/amazon/en/public/verify/credential/9ddc675bcebd470fb458b0207b112c75</a>
+        </li>
+      </ul>
+    </section>
 
-          <div class="role">
-            <div class="role-header">
-              <div>
-                <div class="role-title">BACHELOR’S DEGREE</div>
-                <div class="role-company">BHAVAN’S VIVEKANANDA COLLEGE</div>
-              </div>
-              <div class="role-meta">06/2017 - 11/2020 | Hyderabad, India</div>
-            </div>
-            <div class="role-meta">Courses</div>
-            <ul class="bullets">
-              <li>Mathematics, Physics and Computer Science</li>
-            </ul>
-          </div>
-        </section>
-      </main>
+    <section>
+      <h2>Awards</h2>
+      <ul>
+        <li>Academic Excellence Award - SRM University (2023 - 2025)</li>
+        <li>1st Prize - Bhavan's Vivekananda College (2019)</li>
+      </ul>
+    </section>
 
-      <aside>
-        <section class="section-card">
-          <h3 class="section-title">Skills</h3>
-          <ul class="pill-list">
-            <li class="pill">Microservices & REST API Design</li>
-            <li class="pill">Backend Engineering (Python, Node.js)</li>
-            <li class="pill">Cloud-Native Architecture (AWS)</li>
-            <li class="pill">CI/CD & Observability</li>
-            <li class="pill">Event-Driven Workflows (SNS/SQS)</li>
-            <li class="pill">GenAI Integration (RAG)</li>
-          </ul>
-        </section>
+    <section>
+      <h2>Languages</h2>
+      <ul>
+        <li>English (Native or Bilingual Proficiency)</li>
+        <li>Hindi (Native or Bilingual Proficiency)</li>
+        <li>Telugu (Professional Working Proficiency)</li>
+      </ul>
+    </section>
 
-        <section class="section-card">
-          <h3 class="section-title">Organizations</h3>
-          <ul class="simple-list">
-            <li>EY GDS India LLP (07/2025 - Present)</li>
-            <li>Cognizant (11/2020 - 07/2025)</li>
-          </ul>
-        </section>
-
-        <section class="section-card">
-          <h3 class="section-title">Technical Skills</h3>
-          <div class="tech-grid">
-
-            <div class="tech-item">
-              <h4>Backend Development</h4>
-              <p>Python (FastAPI, Flask), Node.js (Express), REST API Design, SQL, API Integration</p>
-            </div>
-
-            <div class="tech-item">
-              <h4>Frontend Development</h4>
-              <p>React, JavaScript (ES6+), HTML5, CSS3, Component-Based Architecture</p>
-            </div>
-
-            <div class="tech-item">
-              <h4>Cloud & DevOps</h4>
-              <p>AWS (S3, DynamoDB, SNS/SQS, API Gateway, IAM, CloudWatch, Redshift, Glue), Docker, GitHub Actions
-                (CI/CD), Linux, monitoring & alerting</p>
-            </div>
-
-            <div class="tech-item">
-              <h4>Application Architecture</h4>
-              <p>Microservices Architecture, Service-Oriented Architecture, Event-Driven Systems, Service-to-Service
-                Communication</p>
-            </div>
-
-            <div class="tech-item">
-              <h4>Data & Processing</h4>
-              <p>ETL Pipelines, PySpark, Batch Processing</p>
-            </div>
-
-            <div class="tech-item">
-              <h4>Generative AI</h4>
-              <p>LLM Integration (OpenAI, AWS Bedrock), RAG-based Workflows, Prompt Engineering, API-based AI
-                Integration</p>
-            </div>
-            <div class="tech-item">
-              <h4>System Design & Reliability</h4>
-              <p>Scalable Systems, Monitoring & Alerting, Incident Reduction, High Availability</p>
-            </div>
-
-          </div>
-        </section>
-
-        <section class="section-card">
-          <h3 class="section-title">Personal Projects</h3>
-          <div class="label-row">
-            <div class="project-title">Generative AI-powered DevOps Assistant</div>
-            <div class="role-meta">07/2025 - 07/2025</div>
-          </div>
-          <p class="project-desc">
-            Built a full-stack AI-powered DevOps assistant using React (frontend) and FastAPI/Node.js (backend).
-            Integrated LLM APIs (AWS Bedrock/OpenAI) to implement RAG-based knowledge retrieval workflows.
-            Designed REST APIs for AI inference and deployed using Docker and CI/CD pipelines.
-            Implemented DevOps-focused automation workflows for incident troubleshooting and monitoring.
-          </p>
-          <p class="project-desc"><b>GitHub repo: </b> <a
-              href="https://github.com/shivadey108P/devops-ai-assistant">https://github.com/shivadey108P/devops-ai-assistant</a>
-          </p>
-        </section>
-
-        <section class="section-card">
-          <h3 class="section-title">Honor Awards</h3>
-          <div class="role">
-            <div class="label-row">
-              <div class="role-title">Academic Excellence Award | SRM University</div>
-              <div class="role-meta">03/2023 - 03/2025</div>
-            </div>
-            <div class="role-meta">Name of the institution that issued/awarded it</div>
-          </div>
-          <div class="role">
-            <div class="label-row">
-              <div class="role-title">1st Prize | Bhavan’s Vivekananda College</div>
-              <div class="role-meta">06/2019 - 12/2019</div>
-            </div>
-            <div class="role-meta">Name of the institution that issued/awarded it</div>
-          </div>
-        </section>
-
-        <section class="section-card">
-          <h3 class="section-title">Languages</h3>
-          <ul class="simple-list">
-            <li>English (Native or Bilingual Proficiency)</li>
-            <li>Hindi (Native or Bilingual Proficiency)</li>
-            <li>Telugu (Professional Working Proficiency)</li>
-          </ul>
-        </section>
-
-        <section class="section-card">
-          <h3 class="section-title">Interests</h3>
-          <div class="pill" style="display: inline-block;">Fitness & strength training, boxing, badminton, chess, piano
-          </div>
-        </section>
-      </aside>
-    </div>
-  </div>
+    <section>
+      <h2>Interests</h2>
+      <p>Fitness and strength training, boxing, badminton, chess, piano.</p>
+    </section>
+  </main>
 </body>
 
 </html>
