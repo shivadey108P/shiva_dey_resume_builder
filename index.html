@@ -105,12 +105,11 @@
 
     <section>
       <h2>Summary</h2>
-      <p>Senior Data Engineer with 5+ years of experience building scalable data pipelines and backend systems using
-        Python, PySpark, and AWS. Specialized in ETL pipeline design, distributed data processing, and event-driven
-        architectures using AWS Glue, S3, Lambda, and Databricks. Strong expertise in SQL, data modeling, and
-        performance optimization for large-scale data workloads. Experienced in building reliable data systems with
-        idempotent processing, data quality frameworks, and production-grade monitoring. Skilled in designing scalable
-        and reliable cloud-based data systems aligned with business requirements and performance goals.</p>
+      <ul>
+        <li>Senior Data Engineer with 5+ years building distributed AWS data platforms for fintech and enterprise workloads.</li>
+        <li>Focused on resilient batch + streaming ETL, multi-region-ready ingestion, and API/data-serving layers used by 50+ downstream consumers.</li>
+        <li>Track record of measurable outcomes: ~70% query performance gains, 99% pipeline reliability, 300-800 ms API latency reduction, and MTTR improvement from 4-5 hours to 1-2 hours.</li>
+      </ul>
     </section>
 
     <section>
@@ -119,45 +118,26 @@
       <h3>Technical Lead - Application Engineer | EY GDS (Client: The Vanguard Group)</h3>
       <p class="meta">Jul 2025 - Present | Hyderabad, India</p>
       <ul>
-        <li>Designed and implemented scalable batch and event-driven data pipelines using PySpark and AWS Glue for
-          large-scale data processing.</li>
-        <li>Designed AWS-based data processing workflows leveraging Glue, Lambda, and S3, focusing on scalability,
-          reliability, and cost efficiency.</li>
-        <li>Built end-to-end ETL workflows for ingesting, transforming, and loading high-volume datasets into
-          S3-based data lake architectures.</li>
-        <li>Optimized PySpark jobs using partitioning strategies and skew handling, reducing execution time and
-          improving large-scale data processing efficiency.</li>
-        <li>Developed event-driven orchestration using AWS EventBridge and Lambda for automated pipeline triggering and
-          workflow coordination.</li>
-        <li>Implemented robust data quality and validation frameworks (schema checks, reconciliation, null handling) to
-          ensure data reliability.</li>
-        <li>Built idempotent and fault-tolerant pipelines with retry mechanisms and monitoring for production-grade
-          stability.</li>
-        <li>Designed loosely coupled distributed data systems using event-driven architecture (SNS/SQS), improving
-          scalability and reducing inter-service dependencies.</li>
-        <li>Implemented streaming ingestion patterns using Kinesis for near real-time data processing workflows.</li>
-        <li>Designed REST APIs using FastAPI and API Gateway for secure data access and service integrations.</li>
-        <li>Reduced incident triage effort by ~20% through automated alerting and recovery workflows using SNS/SQS.</li>
+        <li>Engineered a shared AWS data platform ingesting 15-20 provider feeds and 11+ daily transaction files (200 MB-2 GB) using Glue + PySpark with incremental, fault-tolerant ingestion patterns.</li>
+        <li>Designed parallel Glue job orchestration with checkpoint recovery, idempotent retries, and failover-safe execution, sustaining 99% daily pipeline reliability for business-critical reporting windows.</li>
+        <li>Implemented batch + event-driven ingestion with S3, Lambda, EventBridge, SNS/SQS, and Kinesis to support active-active-ready processing paths and faster downstream propagation.</li>
+        <li>Optimized Redshift serving layers using sort keys, workload-aware SQL tuning, and materialized views, improving high-volume query performance by ~70% for analytics and operational teams.</li>
+        <li>Built JWT-aware consumer APIs on FastAPI + API Gateway with Redis caching, reducing response latency by 300-800 ms while serving data to Web UI and mobile applications.</li>
+        <li>Improved platform observability with automated alerts, runbook-driven remediation, and deployment guardrails, reducing MTTR from ~4-5 hours to ~1-2 hours during production incidents.</li>
+        <li>Developed AI-assisted incident workflows with LangChain and LangGraph to analyze thousands of logs/events, generate root-cause summaries, and prepare remediation-ready change proposals.</li>
+        <li>Raised LLM automation quality by 50%+ through prompt tuning, Pydantic-based structured outputs, and RAGAS-backed response evaluation pipelines for operational troubleshooting use cases.</li>
       </ul>
 
       <h3>Software Engineer / Programmer Analyst | Cognizant</h3>
       <p class="meta">Nov 2020 - Jul 2025 | Hyderabad, India</p>
       <ul>
-        <li>Designed and developed scalable ETL pipelines using AWS Glue, PySpark, SQL, and Databricks for enterprise
-          data processing across 9+ projects.</li>
-        <li>Implemented Delta Lake-based pipelines supporting incremental processing and reliable downstream analytics.
-        </li>
-        <li>Applied data modeling techniques (star schema, dimensional modeling) for reporting and analytics use cases.
-        </li>
-        <li>Built data validation frameworks ensuring data consistency, reconciliation, and quality across multiple
-          sources.</li>
-        <li>Optimized SQL queries and batch workflows to improve performance and reduce cloud compute costs.</li>
-        <li>Developed backend services and Lambda-based APIs for workflow automation, reducing manual validation
-          efforts by ~25%.</li>
-        <li>Improved data processing efficiency and reduced operational overhead through optimized ETL workflows and
-          automation.</li>
-        <li>Migrated legacy systems to AWS using ECS, Docker, and CloudFormation, improving deployment reliability.</li>
-        <li>Collaborated with cross-functional teams to translate business requirements into scalable data solutions.</li>
+        <li>Delivered distributed ETL and data modernization initiatives across 9+ enterprise streams using PySpark, Glue, Databricks, and SQL for high-volume financial datasets.</li>
+        <li>Implemented incremental ingestion and checkpointed processing to reduce full reloads, improve resiliency, and protect downstream SLAs across dependent analytics systems.</li>
+        <li>Built reconciliation and data-quality controls (schema, completeness, and record-level checks) that improved trust in shared datasets consumed by multiple business teams.</li>
+        <li>Optimized API-integrated ETL workflows and backend services with Lambda and event-driven patterns, cutting repetitive operational effort by ~144 engineering hours per sprint.</li>
+        <li>Improved CI/CD release workflows for data services using GitHub Actions and automated validations, reducing deployment risk and shortening release preparation cycles.</li>
+        <li>Migrated legacy workloads to cloud-native AWS architectures (ECS, Docker, IaC), improving reliability and operational supportability for production data services.</li>
+        <li>Supported platform consumers through Redshift views, data shares, and API-based access patterns, enabling consistent delivery for analytics and operational applications.</li>
       </ul>
     </section>
 
@@ -165,49 +145,12 @@
       <h2>Technical Skills</h2>
       <ul>
         <li><strong>Languages:</strong> Python, SQL</li>
-        <li><strong>Data Engineering:</strong> PySpark, Databricks, AWS Glue, ETL/ELT Pipelines, Batch &amp; Streaming
-          Processing, Performance Optimization</li>
-        <li><strong>Data Modeling:</strong> Data Lakes, Star Schema, Dimensional Modeling, Schema Design, Data Quality
-        </li>
-        <li><strong>Cloud (AWS):</strong> S3, Glue, Lambda, EventBridge, Redshift, Athena, DynamoDB, SNS/SQS</li>
-        <li><strong>Orchestration &amp; Streaming:</strong> Airflow (Basic), Event-Driven Pipelines, Kinesis, Kafka</li>
-        <li><strong>Backend:</strong> FastAPI, Flask, REST APIs, Pydantic, JWT, Microservices</li>
-        <li><strong>DevOps:</strong> Docker, GitHub Actions, CI/CD, Monitoring, Debugging</li>
-        <li><strong>AI (Exposure):</strong> OpenAI, AWS Bedrock (Basic)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <h3>Serverless ETL Pipeline with AWS Glue, PySpark &amp; EventBridge</h3>
-      <p class="meta">Data Engineering Project</p>
-      <ul>
-        <li>Designed a serverless ETL pipeline using AWS Glue (PySpark), S3, Lambda, and EventBridge for automated
-          data processing.</li>
-        <li>Implemented event-driven ingestion workflows triggered by S3 uploads for real-time pipeline execution.</li>
-        <li>Designed the pipeline using data lake architecture principles with raw, processed, and archive layers.</li>
-        <li>Built data transformation logic including normalization, parsing, and null handling using PySpark.</li>
-        <li>Enabled data quality checks and downstream analytics via Athena and DynamoDB.</li>
-      </ul>
-      <p>Repository: <a href="https://github.com/shivadey108P/startup_funding_pyspark_aws_glue_job" target="_blank"
-          rel="noopener noreferrer">github.com/shivadey108P/startup_funding_pyspark_aws_glue_job</a></p>
-
-      <h3>DevOps Operations Assistant</h3>
-      <p class="meta">Jul 2025 - Jul 2025</p>
-      <ul>
-        <li>Built backend services using FastAPI/Node.js and REST APIs for operational workflow automation and system
-          support.</li>
-        <li>Implemented orchestration for diagnostics, task routing, and data retrieval workflows across services.</li>
-        <li>Containerized deployments with Docker and automated releases via CI/CD pipelines.</li>
-        <li>Used AI APIs as a secondary component for summarization and operator productivity.</li>
-      </ul>
-      <p>Repository: <a href="https://github.com/shivadey108P/devops-ai-assistant" target="_blank"
-          rel="noopener noreferrer">github.com/shivadey108P/devops-ai-assistant</a></p>
-
-      <h3>SmartCase - Test Case Automation Tool</h3>
-      <ul>
-        <li>Developed backend workflows for context-aware test case draft generation from requirement inputs.</li>
-        <li>Implemented reusable retrieval patterns to improve response consistency and reduce manual effort.</li>
+        <li><strong>Data Engineering:</strong> Distributed ETL/ELT, PySpark, AWS Glue, Batch + Streaming Pipelines, Incremental Ingestion, Checkpoint Recovery</li>
+        <li><strong>Cloud Architecture:</strong> S3, Lambda, Redshift, DynamoDB, EventBridge, SNS/SQS, Kinesis; multi-region-aware and high-availability data workflows</li>
+        <li><strong>Data Serving &amp; APIs:</strong> Redshift materialized views, data shares, FastAPI, API Gateway, Redis caching, JWT-based consumer identification</li>
+        <li><strong>Operational Excellence:</strong> CI/CD (GitHub Actions), observability, automated remediation, incident response, performance tuning, resiliency engineering</li>
+        <li><strong>AI Engineering (Applied):</strong> LangChain, LangGraph, multi-agent workflows, LLM orchestration, RAG-based automation, Pydantic structured outputs, RAGAS evaluation pipelines, prompt engineering</li>
+        <li><strong>ML Foundations for Automation:</strong> Pandas, NumPy, Scikit-learn basics, classification/regression fundamentals, anomaly detection support workflows</li>
       </ul>
     </section>
 
@@ -215,8 +158,7 @@
       <h2>Education</h2>
       <ul>
         <li><strong>Master of Computer Applications (MCA)</strong> - SRM University (2023 - 2025)</li>
-        <li><strong>Bachelor's Degree</strong> - Bhavan's Vivekananda College (2017 - 2020), Mathematics, Physics and
-          Computer Science</li>
+        <li><strong>Bachelor's Degree</strong> - Bhavan's Vivekananda College (2017 - 2020), Mathematics, Physics and Computer Science</li>
       </ul>
     </section>
 
@@ -229,28 +171,6 @@
             rel="noopener noreferrer">https://cp.certmetrics.com/amazon/en/public/verify/credential/9ddc675bcebd470fb458b0207b112c75</a>
         </li>
       </ul>
-    </section>
-
-    <section>
-      <h2>Awards</h2>
-      <ul>
-        <li>Academic Excellence Award - SRM University (2023 - 2025)</li>
-        <li>1st Prize - Bhavan's Vivekananda College (2019)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Languages</h2>
-      <ul>
-        <li>English (Native or Bilingual Proficiency)</li>
-        <li>Hindi (Native or Bilingual Proficiency)</li>
-        <li>Telugu (Professional Working Proficiency)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Interests</h2>
-      <p>Fitness and strength training, boxing, badminton, chess, piano.</p>
     </section>
   </main>
 </body>
