@@ -106,9 +106,9 @@
     <section>
       <h2>Summary</h2>
       <ul>
-        <li>Senior Data Engineer with 5+ years building distributed AWS data platforms for fintech and enterprise workloads.</li>
-        <li>Focused on resilient batch + streaming ETL, multi-region-ready ingestion, and API/data-serving layers used by 50+ downstream consumers.</li>
-        <li>Track record of measurable outcomes: ~70% query performance gains, 99% pipeline reliability, 300-800 ms API latency reduction, and MTTR improvement from 4-5 hours to 1-2 hours.</li>
+        <li>Senior Data Engineer with 5+ years building distributed AWS data and platform systems for fintech-grade workloads.</li>
+        <li>Built resilient batch + event-driven ETL pipelines across 15-20 provider feeds, 11+ daily files (200 MB-2 GB), and data-serving layers used by 50+ downstream consumers.</li>
+        <li>Delivered measurable production impact: ~70% faster Redshift queries, 300-800 ms lower API latency, ~95-96% pipeline reliability, ~144 engineering hours saved per sprint, and MTTR reduction from 4-5 hours to 1-2 hours.</li>
       </ul>
     </section>
 
@@ -118,26 +118,26 @@
       <h3>Technical Lead - Application Engineer | EY GDS (Client: The Vanguard Group)</h3>
       <p class="meta">Jul 2025 - Present | Hyderabad, India</p>
       <ul>
-        <li>Engineered a shared AWS data platform ingesting 15-20 provider feeds and 11+ daily transaction files (200 MB-2 GB) using Glue + PySpark with incremental, fault-tolerant ingestion patterns.</li>
-        <li>Designed parallel Glue job orchestration with checkpoint recovery, idempotent retries, and failover-safe execution, sustaining 99% daily pipeline reliability for business-critical reporting windows.</li>
-        <li>Implemented batch + event-driven ingestion with S3, Lambda, EventBridge, SNS/SQS, and Kinesis to support active-active-ready processing paths and faster downstream propagation.</li>
-        <li>Optimized Redshift serving layers using sort keys, workload-aware SQL tuning, and materialized views, improving high-volume query performance by ~70% for analytics and operational teams.</li>
-        <li>Built JWT-aware consumer APIs on FastAPI + API Gateway with Redis caching, reducing response latency by 300-800 ms while serving data to Web UI and mobile applications.</li>
-        <li>Improved platform observability with automated alerts, runbook-driven remediation, and deployment guardrails, reducing MTTR from ~4-5 hours to ~1-2 hours during production incidents.</li>
-        <li>Developed AI-assisted incident workflows with LangChain and LangGraph to analyze thousands of logs/events, generate root-cause summaries, and prepare remediation-ready change proposals.</li>
-        <li>Raised LLM automation quality by 50%+ through prompt tuning, Pydantic-based structured outputs, and RAGAS-backed response evaluation pipelines for operational troubleshooting use cases.</li>
+        <li>Engineered a shared AWS data platform ingesting 15-20 provider feeds and 11+ daily transaction files (200 MB-2 GB) using Glue + PySpark with incremental, fault-tolerant processing.</li>
+        <li>Designed distributed ETL orchestration with checkpoint recovery, idempotent retries, and restart-safe execution paths, sustaining ~95-96% daily pipeline reliability for reporting SLAs.</li>
+        <li>Implemented batch + event-driven ingestion across S3, Lambda, EventBridge, SNS/SQS, and Kinesis to reduce end-to-end propagation delays for 50+ downstream consumers.</li>
+        <li>Optimized Redshift serving layers with sort/distribution key redesign, SQL tuning, and materialized views, improving high-volume query performance by ~70% for analytics and operations teams.</li>
+        <li>Built JWT-aware FastAPI services behind API Gateway with Redis response caching, reducing read latency by 300-800 ms for web and mobile data access patterns.</li>
+        <li>Used DynamoDB for low-latency state and idempotency tracking in ingestion flows, while keeping analytical joins in Redshift to balance access speed, cost, and query flexibility.</li>
+        <li>Improved observability with metric-based alerts, runbook-driven remediation, and deployment guardrails, reducing MTTR from ~4-5 hours to ~1-2 hours in production incidents.</li>
+        <li>Developed AI-assisted incident workflows (LangChain/LangGraph) to correlate logs and alerts, generate root-cause summaries, and accelerate remediation planning for on-call engineers.</li>
       </ul>
 
       <h3>Software Engineer / Programmer Analyst | Cognizant</h3>
       <p class="meta">Nov 2020 - Jul 2025 | Hyderabad, India</p>
       <ul>
-        <li>Delivered distributed ETL and data modernization initiatives across 9+ enterprise streams using PySpark, Glue, Databricks, and SQL for high-volume financial datasets.</li>
-        <li>Implemented incremental ingestion and checkpointed processing to reduce full reloads, improve resiliency, and protect downstream SLAs across dependent analytics systems.</li>
-        <li>Built reconciliation and data-quality controls (schema, completeness, and record-level checks) that improved trust in shared datasets consumed by multiple business teams.</li>
-        <li>Optimized API-integrated ETL workflows and backend services with Lambda and event-driven patterns, cutting repetitive operational effort by ~144 engineering hours per sprint.</li>
-        <li>Improved CI/CD release workflows for data services using GitHub Actions and automated validations, reducing deployment risk and shortening release preparation cycles.</li>
-        <li>Migrated legacy workloads to cloud-native AWS architectures (ECS, Docker, IaC), improving reliability and operational supportability for production data services.</li>
-        <li>Supported platform consumers through Redshift views, data shares, and API-based access patterns, enabling consistent delivery for analytics and operational applications.</li>
+        <li>Delivered distributed ETL and cloud modernization initiatives across 9+ enterprise streams using PySpark, Glue, Databricks, and SQL for high-volume financial datasets.</li>
+        <li>Implemented incremental ingestion and checkpointed recovery patterns to reduce full reloads, improve resiliency, and protect downstream SLAs.</li>
+        <li>Built reconciliation and data-quality controls (schema, completeness, record-level checks) that improved trust in shared datasets consumed by multiple business teams.</li>
+        <li>Optimized API-integrated ETL workflows with Lambda and event-driven patterns, reducing repetitive operational effort by ~144 engineering hours per sprint.</li>
+        <li>Standardized CI/CD deployments for data services using GitHub Actions and CloudFormation, adding repeatable environment provisioning, release validation, and safer rollback workflows.</li>
+        <li>Migrated legacy workloads to containerized AWS runtimes (ECS + Docker), improving runtime consistency and operational supportability for production data services.</li>
+        <li>Enabled multi-consumer delivery via Redshift views, data shares, and API-based access patterns, supporting analytics and operational applications on a shared platform.</li>
       </ul>
     </section>
 
@@ -145,12 +145,11 @@
       <h2>Technical Skills</h2>
       <ul>
         <li><strong>Languages:</strong> Python, SQL</li>
-        <li><strong>Data Engineering:</strong> Distributed ETL/ELT, PySpark, AWS Glue, Batch + Streaming Pipelines, Incremental Ingestion, Checkpoint Recovery</li>
-        <li><strong>Cloud Architecture:</strong> S3, Lambda, Redshift, DynamoDB, EventBridge, SNS/SQS, Kinesis; multi-region-aware and high-availability data workflows</li>
-        <li><strong>Data Serving &amp; APIs:</strong> Redshift materialized views, data shares, FastAPI, API Gateway, Redis caching, JWT-based consumer identification</li>
-        <li><strong>Operational Excellence:</strong> CI/CD (GitHub Actions), observability, automated remediation, incident response, performance tuning, resiliency engineering</li>
-        <li><strong>AI Engineering (Applied):</strong> LangChain, LangGraph, multi-agent workflows, LLM orchestration, RAG-based automation, Pydantic structured outputs, RAGAS evaluation pipelines, prompt engineering</li>
-        <li><strong>ML Foundations for Automation:</strong> Pandas, NumPy, Scikit-learn basics, classification/regression fundamentals, anomaly detection support workflows</li>
+        <li><strong>Data Engineering:</strong> Distributed ETL/ELT, PySpark, AWS Glue, batch and event-driven pipelines, incremental ingestion, checkpoint recovery</li>
+        <li><strong>Cloud &amp; Platform:</strong> AWS data services, multi-region-ready workflow design, high-availability processing, infrastructure as code (CloudFormation)</li>
+        <li><strong>Data Serving &amp; APIs:</strong> Redshift optimization (sort/distribution keys, materialized views), FastAPI, API Gateway, Redis caching, DynamoDB state/idempotency modeling</li>
+        <li><strong>Operational Excellence:</strong> CI/CD (GitHub Actions), observability, on-call incident response, runbook automation, resiliency engineering, performance tuning</li>
+        <li><strong>AI-Assisted Operations:</strong> LangChain, LangGraph, LLM orchestration, Pydantic structured outputs, RAG-based troubleshooting and remediation workflows</li>
       </ul>
     </section>
 
